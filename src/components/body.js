@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from './Sidebar'
 import ButtonList from './ButtonList'
 import VideoCard from './VideoCard'
+import { Outlet } from 'react-router'
 
 const Body = () => {
   return (
@@ -10,9 +11,7 @@ const Body = () => {
       <Sidebar />
 
       <div className="flex flex-col gap-12">
-        <ButtonList />
-    
-      <VideoCard/>
+        <Outlet />
       </div>
     </div>
   )

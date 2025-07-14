@@ -1,6 +1,6 @@
 
 const Videos = ({info}) => {
-    console.log(info);
+
     const views = Math.floor((info?.statistics?.viewCount)/1000)
   return (
     <div className ="w-72 cursor-pointer m-2">
@@ -13,5 +13,7 @@ const Videos = ({info}) => {
     </div>
   )
 }
+
+
 
 export default Videos
