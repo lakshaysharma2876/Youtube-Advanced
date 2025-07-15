@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { toggleSidebarBtn } from "../utils/sidebarSlice";
+import { openSideMenu, toggleSidebarBtn } from "../utils/sidebarSlice";
 
 const Header = () => {
 
@@ -8,6 +8,11 @@ const Header = () => {
   const toggleSidebar = () => {
     dispatch(toggleSidebarBtn());
   }
+
+  useEffect(() => {
+    dispatch(openSideMenu());
+  },[])
+  
   return (
     <div className="flex flex-wrap shadow-lg bg-white p-2 justify-between">
       <div className="flex items-center">
